@@ -1,0 +1,24 @@
+#include<iostream>
+#include<Windows.h>
+import random
+
+print(input("Press F to fish!"))
+
+def FibshGen():
+    num = random.randrange(0, 100) #Creates a number between 1-100
+    if num < 15: #15% chance
+        print("You slowly pull in a large salmon!")
+        return "Salmon"
+    elif num < 20: #5% chance
+        print("You struggle for a good bit before yanking a massive tuna out of the water!")
+        return "Tuna"
+    elif num < 50: #30% chance
+        print("You put some effort in and pull out a medium sized Bass.")
+        return "Bass"
+    elif num < 75: #50% chance
+        print("You reeled in a small cod.")
+        return "Cod"
+    else:
+        print("You got nothing. You reel in your line to reapply some bait.")
+        
+print(FibshGen(), "was added to your inventory!")
