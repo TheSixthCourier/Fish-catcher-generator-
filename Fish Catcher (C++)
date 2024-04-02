@@ -1,0 +1,29 @@
+#include<iostream>
+#include<Windows.h>
+using namespace std;
+
+void FibshGen();
+
+int main() {
+	char input;
+	while (1) {
+		FibshGen();
+		cout << "Press F to fish." << endl;
+		cin >> input;
+	}
+
+}
+
+void FibshGen() {
+	int num = rand() % 100 + 1; //Creates a number between 1-100
+	if (num < 15) //15% chance.
+		cout << "You slowly pull in a large salmon!" << endl;
+	else if (num < 20) //5% chance.
+		cout << "You struggle for a good bit before yanking a massive tuna out of the water!" << endl;
+	else if (num < 50) //30% chance.
+		cout << "You put some effort in and pull out a medium sized Bass." << endl;
+	else if (num < 75) //50% chance.
+		cout << "You reeled in a small cod." << endl;
+	else
+		cout << "You got nothing. You reel in your line to reapply some bait." << endl;
+}
